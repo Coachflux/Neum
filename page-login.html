@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
     <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="css/apexcharts.css">
+    <link rel="stylesheet" href="firebase/style.css">
     <!-- Core Stylesheet-->
     <link rel="stylesheet" href="style.css">
     <!-- Web App Manifest-->
@@ -49,16 +50,19 @@
           <div class="col-12 col-sm-9 col-md-7 col-lg-6 col-xl-5">
             <div class="text-center px-4"><img class="login-intro-img" src="img/bg-img/36.png" alt=""></div>
             <!-- Register Form-->
-            <div class="register-form mt-4 px-4">
-              <h6 class="mb-3 text-center">Log in to continue to AC.</h6>
+            <div class="register-form mt-4 px-4" id="signIn">
+              <h6 class="mb-3 text-center">Log in to continue to MegaDrop.</h6>
               <form action="page-home.html">
+                <div id="signInMessage" class="messageDiv" style="display:none;"></div>
                 <div class="form-group">
-                  <input class="form-control" type="text" placeholder="Username">
+                  <i class="fas fa-envelope"></i>
+                  <input class="form-control" type="email" id="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" type="password" placeholder="Enter Password">
+                  <i class="fas fa-lock"></i>
+                  <input class="form-control" type="password" id="password"  placeholder="Password" required>
                 </div>
-                <button class="btn btn-primary w-100" type="submit">Sign In</button>
+                <button class="btn btn-primary w-100" type="submit" id="submitSignIn">Sign In</button>
               </form>
             </div>
             <!-- Login Meta-->
@@ -89,5 +93,7 @@
     <script src="js/default/clipboard.js"></script>
     <!-- PWA-->
     <script src="js/pwa.js"></script>
+    <script src="firebase/firebaseauth.js"></script>
+    <script src="firebase/script.js"></script>
   </body>
 </html>
