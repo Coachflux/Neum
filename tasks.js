@@ -37,6 +37,6 @@ function checkAllTasksCompleted() {
 }
 
 // Run check when on index.html
-if (window.location.pathname.includes("index.html")) {
+if (window.location.pathname.includes("tasks.html")) {
     checkTaskStatus();
 }
