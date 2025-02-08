@@ -1,1 +1,8 @@
-
+body {
+    font-family: Arial, sans-serif;
+    background: #e0e5ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
