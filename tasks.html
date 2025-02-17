@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neumorphism Countdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #e0e0e0;
+      box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+      border-radius: 20px;
+      padding: 20px;
+      max-width: 400px;
+      text-align: center;
+    }
+    .banner {
+      width: 100%;
+      height: 200px;
+      background-image: url('https://via.placeholder.com/400x200');
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      box-shadow: inset 10px 10px 20px #bebebe, inset -10px -10px 20px #ffffff;
+      margin-bottom: 20px;
+    }
+    .text {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    #countdown {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="banner"></div>
+    <div class="text">Next $500,000 USDT drop coming soon</div>
+    <div id="countdown">Loading...</div>
+  </div>
+
+  <script>
+    function startCountdown(endTime) {
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = endTime - now;
+
+        if (timeLeft <= 0) {
+          document.getElementById('countdown').innerText = 'The drop is live!';
+          clearInterval(timerInterval);
+          return;
+        }
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown').innerText =
+          `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+
+      updateCountdown();
+      const timerInterval = setInterval(updateCountdown, 1000);
+    }
+
+    // Set the countdown end date (e.g., 7 days from now)
+    const countdownEndDate = new Date();
+    countdownEndDate.setDate(countdownEndDate.getDate() + 7);
+    startCountdown(countdownEndDate.getTime());
+  </script>
+</body>
+</html>
 
