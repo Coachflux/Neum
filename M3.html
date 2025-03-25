@@ -189,14 +189,27 @@
 <p>Mining profits are not gradual; they come in batches of 100 TON for each successfully solved giver challenge. This means that if your machine has a 10% chance to calculate a block within 24 hours (see step 4 of Quick start) then you will probably need to wait for ~10 days before you will get a 100 TON reward.</p>
 <p>The process of mining is largely automated by mytonctrl. Detailed information about the mining process can be found in PoW givers document.</p>
 
+<h4>Miner Hardware</h4>
+<p>The total network hashrate of TON mining is very high; miners need high-performance machines if they wish to succeed. Mining on standard home computers and notebooks is futile, and we advise against such attempts.</p>
 
+<h6>CPU</h6>
+<p>A modern CPU with Intel SHA Extension support is essential. Most miners use AMD EPYC or Threadripper machines with at least 32 cores and 64 threads.</p>
+
+<h6>GPU</h6>
+<p>Yes! You can mine TON using GPU. There is a version of a PoW miner that is capable to use both Nvidia and AMD GPUs; you can find the code and instructions on how to use it in the POW Miner GPU repository.</p>
+<p>As for now, one needs to be tech-savvy to use this, but we are working on a more user-friendly solution.</p>
+
+<h6>Memory</h6>
+<p>Almost the entire mining process happens in the L2 cache of the CPU. That means that memory speed and size play no role in mining performance. A dual AMD EPYC system with a single DIMM on one memory channel will mine just as fast as one with 16 DIMMs occupying all channels.</p>
+<p>Please do note that this applies to the plain mining process only, if your machine also runs full node or other processes, then things change! But this is outside the scope of this guide.</p>
+
+<h6>Storage</h6>
+A miner running in lite mode uses minimal storage space and does not store data.</p>
+
+<h6>Network</h6>
+<p>Plain miner needs the ability to open outgoing connections to the Internet.</p>
             
-<h4>Solana Price Prediction 2029</h4>
-<p>Based on the analysis of the costs of Solana by crypto experts, the following maximum and minimum SOL prices are expected in 2029: $993.78 and $822.37. On average, it will be traded at $846.36.<h6>Potential ROI: 591.1%</h6></p>
-            
-<h4>Solana Price Prediction 2030</h4>
-<p>Crypto experts are constantly analyzing the fluctuations of Solana. Based on their predictions, the estimated average SOL price will be around $1,242. It might drop to a minimum of $1,199, but it still might reach $1,432 throughout 2030.<h6>Potential ROI: 895.8%</h6></p>
-            
+
     <!-- Footer Nav-->
     <footer>
             <div class="max">
